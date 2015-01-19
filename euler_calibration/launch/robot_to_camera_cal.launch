@@ -20,16 +20,16 @@
    <param name="yaml_file_path" value="$(find euler_calibration)/yaml/" />
    <param name="store_results_package_name" value="$(find euler_calibration)/results" />
    <rosparam>
-     camera_file: "camera_scene_cameras.yaml"
-     target_file: "camera_scene_targets.yaml"
-     cal_job_file: "camera_scene_caljob.yaml"
-     store_results_file_name: "camera_scene_transforms.launch"
+     camera_file: "euler_cameras.yaml"
+     target_file: "euler_targets.yaml"
+     cal_job_file: "euler_caljob.yaml"
+     store_results_file_name: "euler_transforms.launch"
    </rosparam>
   </node>
 
   <!-- Launch mutable joint state publisher for calibratable transforms -->
   <node  name="mutable_joint_state_publisher" pkg="industrial_extrinsic_cal" type="mutable_joint_state_publisher" >
-    <param name="mutableJointStateYamlFile" value="$(find euler_calibration)/yaml/camera_scene_mutable_joint_states.yaml" />
+    <param name="mutableJointStateYamlFile" value="$(find euler_calibration)/yaml/euler_mutable_joint_states.yaml" />
   </node>
 
   <!-- Launch the asus camera node (openni2 launch uses "camera" parameter to create an namespace-->

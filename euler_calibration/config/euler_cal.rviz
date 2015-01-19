@@ -31,7 +31,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: Image
 Visualization Manager:
   Class: ""
   Displays:
@@ -55,7 +55,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /kinect/rgb/image_rect_color
+      Image Topic: /asus/rgb/image_rect_color
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -147,27 +147,27 @@ Visualization Manager:
       Frames:
         All Enabled: false
         asus_frame:
-          Value: false
+          Value: true
         asus_ir_link:
-          Value: false
+          Value: true
         asus_ir_optical_frame:
-          Value: false
+          Value: true
         asus_link:
-          Value: false
+          Value: true
         asus_link_pitch:
-          Value: false
+          Value: true
         asus_link_x_trans:
-          Value: false
+          Value: true
         asus_link_y_trans:
-          Value: false
+          Value: true
         asus_link_yaw:
-          Value: false
+          Value: true
         asus_link_z_trans:
-          Value: false
+          Value: true
         asus_rgb_frame:
-          Value: false
+          Value: true
         asus_rgb_link:
-          Value: false
+          Value: true
         asus_rgb_optical_frame:
           Value: true
         target_frame:
@@ -258,5 +258,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 58
-  Y: 60
+  X: 55
+  Y: 50
