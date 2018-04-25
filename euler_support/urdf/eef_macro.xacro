@@ -25,7 +25,8 @@
       </collision>
     </link>
     <link name="${prefix}tcp"/>
-
+    <link name="${prefix}eef_link"/>
+    
     <joint name="${prefix}eef_base_to_${prefix}eef_body" type="fixed">
       <parent link="${prefix}eef_base" />
       <child link="${prefix}eef_body" />
@@ -36,6 +37,14 @@
       <parent link="${prefix}eef_base" />
       <child link="${prefix}tcp" />
       <origin xyz="0 0 0.17" rpy="0 0 0" />
+    </joint>
+
+    <joint name="motoman_eef_joint" type="revolute">
+      <parent link="${prefix}eef_body" />
+      <child link="${prefix}eef_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="-1" upper="1" effort="10" velocity="100" />
     </joint>
 
   </xacro:macro>
